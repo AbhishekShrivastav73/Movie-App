@@ -19,8 +19,9 @@ function Home() {
 
   useEffect(()=>{
     !header &&  getHeader();
+    console.log(header);
+
   },[])
-  console.log(header);
    
   return header ? ( 
     <>
