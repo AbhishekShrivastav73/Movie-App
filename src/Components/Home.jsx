@@ -47,14 +47,18 @@ function Home() {
           <Header wallpaper={header} />
           <div className="w-full p-5 flex items-center justify-between">
             <h1 className="font-bold text-4xl ">Trending</h1>
-            <DropDown title={"Filter"} options={["tv", "movie", "all"]}  func={(e)=>setCategory(e.target.value)}/>
+            <DropDown
+              title={"Filter"}
+              options={["tv", "movie", "all"]}
+              func={(e) => setCategory(e.target.value)}
+            />
           </div>
           <HorizontalsCards cardData={card} />
         </div>
       </div>
     </>
   ) : (
-    <Loading/>
+    <Loading />
   );
 }
 

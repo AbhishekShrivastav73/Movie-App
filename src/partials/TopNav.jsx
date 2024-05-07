@@ -37,13 +37,7 @@ function TopNav() {
             
            
         </div>  
-        <div className='flex items-center gap-2'>
-
-        <i class="ri-notification-4-fill text-2xl "></i>
-        <i class="ri-user-3-fill text-2xl"></i>
-     
-        <Link className='bg-[#6556CC] text-white px-4 py-2 font-bold rounded-lg'> Login  </Link>
-        </div>
+       
     </div>
   )
 }
