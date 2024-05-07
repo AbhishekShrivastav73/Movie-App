@@ -20,7 +20,7 @@ function TopNav() {
         getSearch();    
     },[query])
   return (
-    <div className='w-full h-[12vh] flex p-2 relative'> 
+    <div className='w-full h-[12vh] flex p-2 relative items-center justify-between'> 
         <div className='w-[65%] rounded-lg ml-4 bg-zinc-700 h-full flex items-center gap-4'>
         <i class="ri-search-line ml-5"></i>
         <input onChange={(e)=>setQuery(e.target.value)} value={query} type="text" className='bg-transparent w-[85%] outline-none' placeholder='Search Here' />
@@ -37,6 +37,13 @@ function TopNav() {
             
            
         </div>  
+        <div className='flex items-center gap-2'>
+
+        <i class="ri-notification-4-fill text-2xl "></i>
+        <i class="ri-user-3-fill text-2xl"></i>
+     
+        <Link className='bg-[#6556CC] text-white px-4 py-2 font-bold rounded-lg'> Login  </Link>
+        </div>
     </div>
   )
 }
