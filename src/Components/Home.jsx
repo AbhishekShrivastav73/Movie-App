@@ -5,6 +5,7 @@ import Header from "../partials/Header";
 import axios from "../utils/Axios";
 import HorizontalsCards from "../partials/HorizontalsCards";
 import DropDown from "../partials/DropDown";
+import Loading from "./Loading";
 
 function Home() {
   document.title = "Movie App | Homepage";
@@ -53,7 +54,7 @@ function Home() {
       </div>
     </>
   ) : (
-    <h1>Loading</h1>
+    <Loading/>
   );
 }
 
