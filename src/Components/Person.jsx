@@ -8,7 +8,7 @@ import Loading from "./Loading";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 function Tv() {
-  document.title = "person App | Persons";
+  document.title = "Movie App | Persons";
   const [category, setCategory] = useState("popular");
   const [duration, setDuration] = useState("day");
   const [person, setperson] = useState([]);
