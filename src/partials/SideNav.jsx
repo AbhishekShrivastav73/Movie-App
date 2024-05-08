@@ -9,7 +9,7 @@ function SideNav() {
             <h3 className='font-semibold tracking-tight text-lg mb-2'>News Feeds</h3>
             {[
                 {icon :<i class="ri-fire-fill"></i> ,title : 'Trending', to :`/trending`},
-                {icon :<i class="ri-bard-fill"></i> ,title : 'Popular', to :`/`},
+                {icon :<i class="ri-bard-fill"></i> ,title : 'Popular', to :`/popular`},
                 {icon :<i class="ri-movie-fill"></i> ,title : 'Movies', to :`/`},
                 {icon :<i class="ri-tv-2-line"></i> ,title : 'TV Shows', to :`/`},
                 {icon :<i class="ri-team-fill"></i> ,title : 'People', to :`/`},

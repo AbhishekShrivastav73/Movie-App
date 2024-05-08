@@ -8,21 +8,21 @@ import Loading from "./Loading";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 function Trending() {
-  document.title = "Movie App | Trending";
-  const [category, setCategory] = useState("all");
+  document.title = "Movie App | Popular";
+  const [category, setCategory] = useState("movie");
   const [duration, setDuration] = useState("day");
-  const [trending, setTrending] = useState([]);
+  const [popular, setpopular] = useState([]);
   const [page, setPage] = useState(1);
   const [hasmore, setHasMore] = useState(true);
 
-  const getTrending = async () => {
+  const getpopular = async () => {
     try {
       const { data } = await axios.get(
-        `/trending/${category}/${duration}?page=${page}`
+        `/${category}/popular?page=${page}`
       );
 
       if (data.results.length > 0) {
-        setTrending((prev) => [...prev, ...data.results]);
+        setpopular((prev) => [...prev, ...data.results]);
         setPage(page + 1);
       } else {
         setHasMore(false);
@@ -36,12 +36,12 @@ function Trending() {
   const navigate = useNavigate();
 
   const refreshHandler = () => {
-    if (trending.length === 0) {
-      getTrending();
+    if (popular.length === 0) {
+      getpopular();
     } else {
       setPage(1);
-      setTrending([]);
-      getTrending();
+      setpopular([]);
+      getpopular();
     }
   };
 
@@ -49,7 +49,7 @@ function Trending() {
     refreshHandler();
   }, [category, duration]);
 
-  return trending.length > 0 ? (
+  return popular.length > 0 ? (
     <div className="w-full  bg-[#1f1e24] text-zinc-200 p-5">
       <div className="flex h-[8vh] items-center justify-between">
         <div className="flex items-center gap-3">
@@ -57,31 +57,27 @@ function Trending() {
             onClick={() => navigate("/")}
             class="ri-arrow-left-line text-2xl hover:text-[#6556CC] "
           ></i>
-          <h1 className="text-2xl font-semibold">Trending</h1>
+          <h1 className="text-2xl font-semibold">Popular</h1>
         </div>
         <div className="flex items-center w-[70%] gap-3">
           <TopNav />
           <DropDown
             title="Category"
-            options={["all", "movie", "tv"]}
+            options={["movie", "tv"]}
             func={(e) => setCategory(e.target.value)}
           />
-          <DropDown
-            title="Duration"
-            options={["day", "week"]}
-            func={(e) => setDuration(e.target.value)}
-          />
+        
         </div>
       </div>
       <div className="content w-full h-full flex flex-wrap gap-8 justify-center mt-8">
         <InfiniteScroll
           className="w-full h-full flex justify-center flex-wrap gap-5"
-          dataLength={trending.length}
-          next={getTrending}
+          dataLength={popular.length}
+          next={getpopular}
           hasMore={true}
-          loader={<h1>Loading</h1>}
+          loader={<h1 className="w-full text-center">Loading</h1>}
         >
-          <Cards data={trending} />
+          <Cards data={popular} />
         </InfiniteScroll>
       </div>
     </div>
