@@ -7,7 +7,7 @@ function HorizontalsCards({ cardData }) {
     <div className="cards w-full h-56 mt-3 p-2  flex items-center gap-3 overflow-y-hidden overflow-x-auto">
       {cardData.map((d,i) => {
         return (
-          <div key={i} className="w-52  h-60 bg-zinc-800 shrink-0 rounded-lg overflow-hidden">
+          <Link to={`/${d.media_type}/details/${d.id}`} key={i} className="w-52  h-60 bg-zinc-800 shrink-0 rounded-lg overflow-hidden">
             <img
               className="w-full h-[55%]"
               src={`https://image.tmdb.org/t/p/original/${
@@ -20,9 +20,9 @@ function HorizontalsCards({ cardData }) {
             </h2>
             <p className="text-sm tracking-tighter  font-light">
               {d.overview.slice(0, 60)}
-              <Link className="text-md text-[#6556CC]">...more</Link>
+              <Link to={`/${d.media_type}/details/${d.id}`} className="text-md text-[#6556CC]">...more</Link>
             </p>
-          </div>
+          </Link>
         );
       })}
     </div>

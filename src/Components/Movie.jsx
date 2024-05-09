@@ -76,7 +76,7 @@ function Movie() {
           hasMore={true}
           loader={<h1 className="w-full text-center">Loading</h1>}
         >
-          <Cards data={movie} />
+          <Cards data={movie} title={'movie'}/>
         </InfiniteScroll>
       </div>
     </div>

@@ -21,7 +21,7 @@ function Header({ wallpaper }) {
       <p><i class="ri-megaphone-fill text-yellow-300"></i>  {wallpaper.release_date || 'No Information'}</p>
       <p><i class="ri-album-fill text-yellow-300"></i>  {wallpaper.media_type.toUpperCase()}</p>
       </div>
-      <Link className="px-4 w-fit py-2 font-bold rounded-md mt-3 bg-[#6556CC]"> Watch Trailer </Link>
+      <Link to={`/${wallpaper.media_type}/details/${wallpaper.id}`} className="px-4 w-fit py-2 font-bold rounded-md mt-3 bg-[#6556CC]"> Watch Trailer </Link>
       </div>
     </div>
   );

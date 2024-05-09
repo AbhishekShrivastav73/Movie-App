@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Cards({ data }) {
+function Cards({ data,title }) {
   return (
     <>
+    
     {data.map((d,idx)=>{
         return (
             <div key={idx} className="w-52 h-72 shrink-0 mb-4">
-            <Link className="w-full h-[90%] inline-block">
+            <Link to={`/${d.media_type || title}/details/${d.id}}`} className="w-full h-[90%] inline-block">
               <img
                 className="w-full h-full object-cover"
                 src={`https://image.tmdb.org/t/p/original/${

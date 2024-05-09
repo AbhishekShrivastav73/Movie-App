@@ -76,7 +76,7 @@ function Tv() {
           hasMore={true}
           loader={<h1 className="w-full text-center">Loading</h1>}
         >
-          <Cards data={person} />
+          <Cards data={person} title={'person'}/>
         </InfiniteScroll>
       </div>
     </div>

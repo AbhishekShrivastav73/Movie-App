@@ -77,7 +77,7 @@ function Popular() {
           hasMore={true}
           loader={<h1 className="w-full text-center">Loading</h1>}
         >
-          <Cards data={popular} />
+          <Cards data={popular} title={category}/>
         </InfiniteScroll>
       </div>
     </div>
