@@ -11,6 +11,7 @@ function Trailer() {
   return  (
     <div className='text-white w-full h-screen absolute top-0 left-0 bg-[rgba(0,0,0,.9)] flex items-center justify-center'>
         {ytVideo ? ( <ReactPlayer
+        controls
         width={1000}
         height={500}
         url={`https://www.youtube.com/watch?v=${ytVideo.key}`}
