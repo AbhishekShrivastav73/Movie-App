@@ -7,7 +7,7 @@ Welcome to MovieMania, your go-to destination for all things movies! This React-
 
 - **Browse Popular Movies**: Explore trending movies and stay up-to-date with what's hot in the world of cinema.
 - **Search Functionality**: Easily find movies by title, genre, or even your favorite actors.
-- **Detailed Movie Information**: Get comprehensive details about each movie, including synopsis, rating, release date, and more.
+- **Detailed Movie Information**: Get comprehensive details about each movie, including synopsis, rating, release date, trailer and more.
 
 ## Installation
 
