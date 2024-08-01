@@ -1,7 +1,7 @@
 
 # MovieMania: Your Ultimate Movie Companion 🍿
 
-Welcome to MovieMania, your go-to destination for all things movies! This React-based frontend project utilizes the power of the TMDB API to provide you with an immersive movie browsing experience right in your browser. Whether you're a cinephile or just looking for something to watch tonight, MovieMania has got you covered.
+Welcome to MovieMania, your go-to destination for all things movies! This React-based frontend project utilizes the power of the TMDB API to provide you with an immersive movie browsing experience right in your browser. Whether you're a cinephile or just looking for something to watch tonight, MovieMania has got you covered
 
 ## Features
 
